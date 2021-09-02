@@ -55,7 +55,7 @@
     - promise 
     대기(pending) : 아직 실행되지 않은 초기 상태
     이행(fulfilled) : 작업이 성공적으로 완료됨.
-    거부(rejected) : 작업이 실패함.
+    거부(rejected) : 작업이 실패함. 이를 시행할시에는 try ~ catch 가아닌 promise ~ then ~ catch 구문을 사용한다.
     
     작업이 성공적으로 이행이 되었거나, 실패 했을 때, 어떠한 작업을 해야 하는데 이 작업은 then 메소드에 의해 실행된다. 
     이는 callback함수를 실행한 것과 같은 효과를 낸다. then 메소드는 promise객체에 붙여서 사용한다.
