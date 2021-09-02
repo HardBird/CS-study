@@ -3,7 +3,7 @@
 [기본 CS지식은 위 링크에서 정리가 잘되어 있으니 한번 읽고서부터 아래를 읽어보도록하자](https://mangkyu.tistory.com/88) 
 
 ##### FRONTEND
-  - Closer , Hoisting은 다른 웹사이트가 정리를 잘해주었으니, 검색해서 개념을 잡아주자 
+
   
 #### HTML 
   - 이벤트의 발생은 하위 -> 상위로 발생(이벤트버블링)하고, 
@@ -123,6 +123,37 @@
               가볍게 넘기던 warning이나 문법적 오류를 전부다 검사를 해주는 모드이다. 
   ```
     - 기본적인 함수들은 대부분 ES6에서 생성이 되었다. (import,arrow function,spread,const&let,promise 등)
+#### JAVASCRIPT CLOSURE 
+  - 원하는 시점에서 내부 클로저를 실행할 수 있다. 
+  - 즉 부모클래스나 메소드에서 상속된 자식 클래스나 메소드를 접근할 때에 부모 클래스로 변수가 선언되어도 내부로 접근이 가능하다.
+  - 이를 스코프체인이라고도 한다. 
+
+#### JAVASCRIPT HOISTING
+  - 함수안에 있는 선언들을 모두 끌어올려서 유효 범위의 최상단으로 선언하게 해주는것이다.
+  - 메모리적으로 변화는 없으며 var 변수 선언과 함수선언문에서만 호이스팅이 발생한다.
+  - 변수의 선언과 대입을 두가지로 나뉘어서 선언을 최상단 스코프에서 실행해준다.
+  - 함수내에서 변수형태를 선언하지않고 실행하면 자동으로 전역변수로 선언이된다. 
+      예시:
+      ```Javascript
+      console.log(name);//undefined
+      a();
+      function a(){
+      name = 'bang';
+      }
+      console.log(name);//bang
+      ```
+      
+      ```Javascript
+      console.log(name);//bang
+      a();
+      function a(){
+      var name = 'bang';
+      }
+      console.log(name);//bang
+      ```
+      
+
+
 #### JAVASCRIPT Throw&Try ~ catch ~ finally 
 - try~catch~finally 에서 비동기처리를 한번 더 시행을 하면, 오류를 잡아 낼 수 없다. 그렇기에 한번 더 try catch문을 안에 작성해주어야한다.   
   (예시: try문에 setTimeout()이 있다면 해당 부분은 오류를 잡지못해서 setTimeout()안에 한번 더 try catch문을 선언해주어야함) 
