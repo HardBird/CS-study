@@ -38,6 +38,14 @@
   - Babel 
     - 버전을 맞춰주는 기술이다. ES6에서 나온 문법이며, ES6를 기준으로 코딩을해도 ES5로 변환을 해준다. 
 
+#### Ajax 
+- 클라이언트에서 직접적인 접근없이 http 통신 규약을 사용하여 서버에서 데이터를 받아오는 기술 
+- 받아오는 데이터는 JSON/XML 두가지로 받아올 수 있다. 
+  - JSON: XML보다 사용자가 조금 더 직관적으로 볼 수 있는 데이터 구조, 데이터의 형태는 정해져있으며 모듈설치없이 문자열로 받아올 수 있다.
+  - XML: 계층적인 구조로 return을 받는 데이터 구조, 데이터 형태가 자유로우며 xml 파싱 모듈이 있어야만 데이터를 받아올 수 있다. 
+- REST API 구조를 이루고 있다.
+  - RESTAPI : SQL조건문등을 사용하지 않고 URI에 필요한 명령어를 입력하고 method를 요청하여 원하는 데이터를 받거나 정정할 수 있는 것.
+ 
 
 #### AMP
 - 웹페이지의 빠른 렌더링을 위한 캐시 기술스택이다. 
@@ -191,4 +199,33 @@ finally {
 3. useState를 사용해서 값에 변동을 체크해야 값에 대한 렌더가 가능하다. (render함수가 없기 때문에)
 
 ```
+#### React Hooks 
+  - 함수형구조에서 클래스형구조에 장점을 사용하기 위해서 나온 기술이다.
+  - useState, useEffect 등을 사용하여서 상태관리를해주어 라이프싸이클 메소드를 사용한다. 
+  - 라이프싸이클 메소드란 리액트에 돔트리라이프 싸이클 구조를 의미한다. 
+  - this로 상태를 관리하는 것보다 코드의 경량화가 가능하며 재사용성을 높여준다. 
+  - Hooks가 나와도 컴포넌트구조와 함께 같이 사용한다. 
 
+
+![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FeceuwJ%2FbtqF7ED8WpX%2FQTATE8lUtpkC09UkB85tG0%2Fimg.jpg)
+```
+-DomTree LifeCycle 
+- 큰 구조로는 componentDidMount(초기화) -> componentDidUpdate(업데이트) -> componentWillunMount(소멸) 구조로 이루어진다.
+- componentDidMount : Hook 개념이나 초기 렌더가 이루어지는 곳 
+- componentDidUpdate : 성능최적화를 하는 구문이며, 값에 대한 업데이트를 해주는 곳 (Hooks에 의한 상태변환)
+- componentWillunMount : 소멸단계, 자원의 해체가 이루어지는 곳이다. 
+
+초기화 단계에서는 useMemo()  
+업데이트 단계에서는 useState()
+모든 단계에서는 useEffect()가 우선 순위를 가진다. 
+```
+
+
+#### React vs Vue 
+  - 앵귤러는 typescript 기반이기에 처음부터 러닝커브가 높아서 논외로 하고 이야기하고자 한다
+  - React는 Vue에 비해서 구조가 조금 더 재사용성이 뚜렷하다.
+  - 하지만 Vue에서는 HTML,CSS,JS 파일을 나누어서 작업할 수 있으며 라이브러리와 템플릿 지원이 조금더 효율적이다.
+  - 자료량은 React가 더 많다. 
+  - 현재에는 React나 Vue나 참고자료나 라이브러리가 둘다 많기에 어떤걸 사용해도 괜찮다. 둘다 virtual DOM을 사용한다.
+  - 코드의 재사용성은 React가 우수하다. Hooks의 개념으로 값을 업데이트하면 덮어씌울수 있지만 Vue에서는 계속해서 객체를 만들어주어야 한다.
+  
