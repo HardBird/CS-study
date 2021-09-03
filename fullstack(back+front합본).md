@@ -26,7 +26,6 @@
 - 보통의 대형 서비스는 서버가 하나터지면 대체서버를 바로 사용하는 무중단배포가 있다.
 - 기본적으로 아래와 같은 구조로 이루어져 있다.
 
-![image](https://media.vlpt.us/images/araaaaan/post/b99d2d54-fb43-4cc1-be09-2b9c3f6f6782/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-08-11%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%206.35.26.png)
 - 웹서버 : 주로 정적인 데이터 처리를 한다. 사용자에게 뿌려지는 뷰나 사용자에게 받는 정적인 데이터들을 저장 및 관리를 한다.
 - 웹애플리케이션서버 : 주로 동적인 데이터 처리를 한다. DB에 관련된 내용에대해서 CRUD가 이루어지거나, SQL MAPPER나 ORM을 이용한다. 
 - 이 두개를 따로 사용하는 이유는 서버의 과부하를 막기 위해서 사용되는 목적이다.
@@ -104,9 +103,6 @@
     3. 스택에 명령이 끝나면(empty) 큐(대기실)에 다시 보내서, 스택으로 하나씩 올려보낸다.
                                                                                                         (아래 이미지 참조)
   ```
-  ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdZ8YBt%2FbtqwhxzE1py%2FRQNPdMhyWbLZ3zDAptsVhK%2Fimg.png)
- 
-  ![image](https://blog.kakaocdn.net/dn/c7OXFt/btqwhUVuXGv/rYhxWO3UOuPePPe2nVL3P1/img.gif)
   - 원시타입의 종류로는 null,undefined,number,string,boolean,object가 있다. 
   - 선언되는 위치에 따라서는 클로져(clouser)가, 호출하는 방법에 따라서는 this를 기억하자. 
   ```
@@ -250,8 +246,6 @@ finally {
   - this로 상태를 관리하는 것보다 코드의 경량화가 가능하며 재사용성을 높여준다. 
   - Hooks가 나와도 컴포넌트구조와 함께 같이 사용한다. 
 
-
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FeceuwJ%2FbtqF7ED8WpX%2FQTATE8lUtpkC09UkB85tG0%2Fimg.jpg)
 ```
 -DomTree LifeCycle 
 - 큰 구조로는 componentDidMount(초기화) -> componentDidUpdate(업데이트) -> componentWillunMount(소멸) 구조로 이루어진다.
